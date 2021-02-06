@@ -145,7 +145,7 @@ C:\>ping google.com
     Минимальное = 22мсек, Максимальное = 39 мсек, Среднее = 26 мсек
     
 Exercise: The Multipath TCP project aims to allow TCP packets to be split across multiple network links and reassembled at the destination. For example, if you were uploading a 100 megabyte file to a server from your phone, it would allow you to send 75 megabytes by WiFi and 25 megabytes by cellular automatically. How should the ratio be chosen if you want to minimise transmission time? Minimise cellular bandwidth use? Explain.
-If Wi-Fi connection is stable, it should word faster so the more megabytes we send by Wi-Fi the less transmission time is needed and less cellular bandwidth is used.
+If Wi-Fi connection is stable, it should work faster so the more megabytes we send by Wi-Fi the less transmission time is needed and less cellular bandwidth is used.
 
 Exercise: UDP is popular for streaming media; explain why.
 UDP is faster (because it doesn't need acknowledgement etc) and it offers reduced latency which is essential for streaming.
