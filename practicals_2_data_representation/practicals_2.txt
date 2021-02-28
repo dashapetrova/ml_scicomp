@@ -116,8 +116,6 @@ CRYPTOGRAPHIC IDEAS
 Exercise: this doesn't mean the file was transferred correctly; why not?
 The mistakes in the file may weight the same as the original data. For example, let's look at two words: cat and kat. They have the same length but one spelling is wrong. It's pretty similar idea.
 
-Exercise: do the same for files with "cat" and "cat2" instead of "hi" and "hi2"
-
 Exercise: implement the Caesar cipher in python, which advances each letter of 'M' by 'SEC = n': enc(1, "a") = "b", etc.
 import string
 def enc(shift, text):
