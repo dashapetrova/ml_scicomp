@@ -103,10 +103,10 @@ The nodes that will have multiple path to it: 4,6,8,9,10,12.
 If we can get a number by several different multiplications it means the node with this number will have several paths to it. Eg.: 12 = 12*1 = 2*6 = 3*4 
 
 Exercise: Identify several maximal spanning trees in the divisibility graph from the previous exercise.
-See the following pictures: tree_1.png, tree_2.png, tree_3.png
+See the following pictures: trees.png
 
 Exercise: model acquaintance using a graph (vertices are people, an edge between A and B means A knows B). Model it with a directed graph. How are these different?
-See the pictures people_graph_1.png, people_graph_2.png
+See the pictures people_graphs.png
 The difference is the following: in case of indirected graph the edge between two people means that they know each other, in case of directed graph the egde shows who knows who.
 Eg.: A - B --- A knows B and B knows A
 A -> B --- A knows B but B doens't know A
