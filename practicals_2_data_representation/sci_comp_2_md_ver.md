@@ -49,7 +49,7 @@ Exercise: use diagrams like the above to explain how to delete an item from a li
             \         /
            -----------------
            |  x[1]  | next |
-	         -----------------
+	   -----------------
 3)
 ---------------       ---------------
 | x[0] | next |--->---| x[2] | NULL | 
@@ -57,7 +57,7 @@ Exercise: use diagrams like the above to explain how to delete an item from a li
             \         /
            -----------------
            |  x[1]  | next |
-	         -----------------
+	   -----------------
 4)
 ---------------       ---------------
 | x[0] | next |--->---| x[1] | NULL | 
