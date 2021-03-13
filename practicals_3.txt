@@ -1,0 +1,67 @@
+COMMAND-LINE AND TEXT INTERFACES
+
+Exercise: Give two examples of asynchronous communication. Give two examples of synchronous communication.
+Asynchronous communication: ...
+Synchronous communication: ...
+
+USING A CLI
+
+Exercise: Compare the output of ls vs ls -l and ls -a; describe how they are similar, and how they are different.
+they all show files in the directory but the output is a little bit different:
+"-a" means "do not ingnore entries starting with ."
+"-1" means "list one file per line"
+So the outputs for three commands will be the following:
+...
+
+Exercise: Explain pushd and popd; what data structure represents your directory history? Give an example of using them to organise a folder with music.
+https://pingvinus.ru/note/pushd-popd
+...
+
+Exercise: Draw a partial tree of your filesystem, starting from the children of your home directory. Include ancestors of your home directory, and siblings of those ancestors.
+Exclude files, just show directories.
+(root)/
+    |
+    | - bin/
+    | - boot/
+    | - cdrom/
+    | - dev/
+    | - etc/
+    | - home/
+    |     | - mint/
+    |     |      | - Desktop/
+    |     |      | - Documents/
+    |     |      | - Downloads/
+    |     |      | - Music/
+    |     |      | - Pictures/
+    |     |      | - Public/
+    |     |      | - Templates/
+    |     |      | - Videos/
+    |
+    | - lib/
+    | - lib64/
+    | - media/
+    | - mnt/
+    | - opt/
+    | - proc/
+    | - rofs/
+    | - root/
+    | - run/
+    | - sbin/
+    | - srv/
+    | - sys/
+    | - tmp/
+    | - usr/
+    | - var/
+    
+SHELL SCRIPTING
+
+Exercise: Write a shell script that asks the user for their name, and greets them.
+
+Exercise: Write a shell script that performs "ROT13" (Caesar cipher with shift 13.) For English, encryption and decryption are the same! (Explain why!)
+
+Exercise: Write a shell function that prints "hidden" if the current directory starts with a dot ".", or if any parent starts with a dot.
+
+UNIX™ FOR POETS
+
+https://ftyers.github.io/079-osnov-programm/classes/01.html
+(Files and directories that start with dots are considered "hidden" on many UNIX-like systems.)
