@@ -1,8 +1,8 @@
 COMMAND-LINE AND TEXT INTERFACES
 
 Exercise: Give two examples of asynchronous communication. Give two examples of synchronous communication.
-Asynchronous communication: ...
-Synchronous communication: ...
+Asynchronous communication: email, some "issue boards"/posts on forums when you leave there your question or smth and wait when somebody will answer.
+Synchronous communication: phone call, some live video meeting (like via zoom)
 
 USING A CLI
 
@@ -11,11 +11,29 @@ they all show files in the directory but the output is a little bit different:
 "-a" means "do not ingnore entries starting with ."
 "-1" means "list one file per line"
 So the outputs for three commands will be the following:
-...
+mint@mint:~$ ls
+Desktop    Downloads  Pictures  Templates  testfile
+Documents  Music      Public    Videos     testfile2
+mint@mint:~$ ls -a
+.              .bashrc     .gtkrc-xfce  .profile          Music      testfile
+..             .cache      .gvfs        .xsession-errors  Pictures   testfile2
+.ICEauthority  .config     .linuxmint   Desktop           Public
+.Xauthority    .gnupg      .local       Documents         Templates
+.bash_logout   .gtkrc-2.0  .mozilla     Downloads         Videos
+mint@mint:~$ ls -1
+Desktop
+Documents
+Downloads
+Music
+Pictures
+Public
+Templates
+Videos
+testfile
+testfile2
 
 Exercise: Explain pushd and popd; what data structure represents your directory history? Give an example of using them to organise a folder with music.
-https://pingvinus.ru/note/pushd-popd
-...
+Pushd and popd are used to work with the command line directory stack. Pushd is used to add directories to the stack, and popd is used to delete them from there. So stack represents this directory history. For example, we have a number of songs that we want to sort by genres into different folders. We create folders with genres and add them to stack for a simplier transition between the directories, and then sort our songs.
 
 Exercise: Draw a partial tree of your filesystem, starting from the children of your home directory. Include ancestors of your home directory, and siblings of those ancestors.
 Exclude files, just show directories.
