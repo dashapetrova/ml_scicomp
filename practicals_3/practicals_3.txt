@@ -1,0 +1,195 @@
+COMMAND-LINE AND TEXT INTERFACES
+
+Exercise: Give two examples of asynchronous communication. Give two examples of synchronous communication.
+Asynchronous communication: email, some "issue boards"/posts on forums when you leave there your question or smth and wait when somebody will answer.
+Synchronous communication: phone call, some live video meeting (like via zoom)
+
+USING A CLI
+
+Exercise: Compare the output of ls vs ls -l and ls -a; describe how they are similar, and how they are different.
+they all show files in the directory but the output is a little bit different:
+"-a" means "do not ingnore entries starting with ."
+"-1" means "list one file per line"
+So the outputs for three commands will be the following:
+mint@mint:~$ ls
+Desktop    Downloads  Pictures  Templates  testfile
+Documents  Music      Public    Videos     testfile2
+mint@mint:~$ ls -a
+.              .bashrc     .gtkrc-xfce  .profile          Music      testfile
+..             .cache      .gvfs        .xsession-errors  Pictures   testfile2
+.ICEauthority  .config     .linuxmint   Desktop           Public
+.Xauthority    .gnupg      .local       Documents         Templates
+.bash_logout   .gtkrc-2.0  .mozilla     Downloads         Videos
+mint@mint:~$ ls -1
+Desktop
+Documents
+Downloads
+Music
+Pictures
+Public
+Templates
+Videos
+testfile
+testfile2
+
+Exercise: Explain pushd and popd; what data structure represents your directory history? Give an example of using them to organise a folder with music.
+Pushd and popd are used to work with the command line directory stack. Pushd is used to add directories to the stack, and popd is used to delete them from there. So stack represents this directory history. For example, we have a number of songs that we want to sort by genres into different folders. We create folders with genres and add them to stack for a simplier transition between the directories, and then sort our songs.
+
+Exercise: Draw a partial tree of your filesystem, starting from the children of your home directory. Include ancestors of your home directory, and siblings of those ancestors.
+Exclude files, just show directories.
+(root)/
+    |
+    | - bin/
+    | - boot/
+    | - cdrom/
+    | - dev/
+    | - etc/
+    | - home/
+    |     | - mint/
+    |     |      | - Desktop/
+    |     |      | - Documents/
+    |     |      | - Downloads/
+    |     |      | - Music/
+    |     |      | - Pictures/
+    |     |      | - Public/
+    |     |      | - Templates/
+    |     |      | - Videos/
+    |
+    | - lib/
+    | - lib64/
+    | - media/
+    | - mnt/
+    | - opt/
+    | - proc/
+    | - rofs/
+    | - root/
+    | - run/
+    | - sbin/
+    | - srv/
+    | - sys/
+    | - tmp/
+    | - usr/
+    | - var/
+    
+SHELL SCRIPTING
+
+Exercise: Write a shell script that asks the user for their name, and greets them.
+Code:
+#!/bin/bash
+echo "What's your name?"
+read name
+echo "Hello, $name"
+
+Example:
+mint@mint:~/Desktop$ bash ./greeting
+What's your name?
+Tiger
+Hello, Tiger
+
+Exercise: Write a shell script that performs "ROT13" (Caesar cipher with shift 13.)
+Code:
+#!/bin/bash
+rotation=$((${1:-13} % 26))
+padding=$(printf "%${rotation}s" "" | tr ' ' '\001')
+tr "${padding}a-z" "a-za-z" |
+tr "${padding}A-Z" "A-ZA-Z"
+
+Example:
+mint@mint:~/Desktop$ echo hello | bash ./rot13
+uryyb
+mint@mint:~/Desktop$ echo uryyb | bash ./rot13
+hello
+mint@mint:~/Desktop$ echo hello | bash ./rot13 | bash ./rot13
+hello
+
+UNIX™ FOR POETS
+All files i got are here: https://github.com/dashapetrova/ml_scicomp/tree/main/practicals_3
+
+mint@mint:~/Desktop$ sed 's/[^a-zA-ZIӀ]\+/\n/g' < wiki.txt |
+> sort -r |
+> uniq -c > wiki.hist
+mint@mint:~/Desktop$ sed 5q < wiki.txt
+
+Langnes:
+Langnes may refer to:
+
+Langenes, Finnmark:
+mint@mint:~/Desktop$ sed 's/[^a-zA-ZIӀ]\+/\n/g' < wiki.txt | sed 5q
+
+
+Langnes
+
+Langnes
+mint@mint:~/Desktop$ sed 's/[^a-zA-ZIӀ]\+/\n/g' < wiki.txt |
+> sort -r |
+> sed 10q
+years
+years
+year
+year
+woods
+woods
+won
+won
+within
+within
+mint@mint:~/Desktop$ sed 's/[^a-zA-ZIӀ]\+/\n/g' < wiki.txt |
+> sort -r |
+> uniq -c |
+> sed 5q
+      2 years
+      2 year
+      2 woods
+      2 won
+      2 within
+mint@mint:~/Desktop$ uconv -x upper < wiki.txt |
+> sed 's/[^a-zA-ZI]\+/\n/g' |
+> sort -r |
+> uniq -c |
+> sed 5q
+      2 YEARS
+      2 YEAR
+      4 WORLD
+      2 WOODS
+      2 WON
+mint@mint:~/Desktop$ uconv -x upper < wiki.txt |
+> sed 's/[^AEYUIO]\+/\n/g' |
+> sort -r |
+> uniq -c
+      4 YEA
+     34 Y
+      2 UI
+     42 UE
+    130 U
+    and so on...
+mint@mint:~/Desktop$ uconv -x upper < wiki.txt |
+> sed 's/[^QWERTPSDFGHJKLZXCVBNM]\+/\n/g' |
+> sort -r |
+> uniq -c
+      2 ZED
+      4 XT
+      2 X
+      6 WN
+      and so on...
+ mint@mint:~/Desktop$ sed 's/[^a-zA-ZIӀ]\+/\n/g' < wiki.txt |
+> sort |
+> uniq -c |
+> sort -nr
+     96 the
+     72
+     56 in
+     50 of
+     42 and
+     and so on...
+mint@mint:~/Desktop$ sed 's/[^a-zA-ZIӀ]\+/\n/g' < wiki.txt > wiki.words
+mint@mint:~/Desktop$ tail -n +2 wiki.words > wiki.nextwords
+mint@mint:~/Desktop$ paste wiki.words wiki.nextwords
+
+    Langnes
+Langnes
+    Langnes
+Langnes    may
+may    refer
+refer    to
+to
+and so on...
