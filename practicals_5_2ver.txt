@@ -1,0 +1,112 @@
+LICENSING AND REDISTRIBUTION
+
+CODE
+
+Exercise: read the Wikipedia articles on Apache, BSD, and MIT
+licenses. Describe the similarities and the differences.
+
+All these licences are of permissive type and require to keep the license file.
+They all are permissive considering the linking, distribution and modification.
+The Apache license thus requires you to keep not only the license file
+but also the NOTICE file if there is one, and show notice for modified
+files. It also addresses some patent-related issues, so companies use
+it a lot.
+As for The MIT and BSD licenses, they have similar requirements. They
+both allow others to do nearly anything with the software including
+modifying it and using it in a product that they sell.
+The difference between BSD and MIT is that some versions of the BSD
+license require to include the disclaimer when you distribute a
+product, the MIT license does not. Also the MIT license seems to be a
+bit simpler.
+
+ART
+
+Exercise: Pick a creative work (or make up a fictional one); come up
+with three obviously non-commercial uses of this work.
+
+For example, an artist made an original drawing. three obviously
+non-commercial uses of this work are the following:
+1. repost this art in some art community
+2. use the drawing as the background of the website
+3. make it the part of the artist collaboration
+
+Exercise: Now argue that all three of these uses are commercial.
+
+1. reposting cool art may lead to the expansion of the audience of the
+community, so if they sell anything in their group, it may lead to
+profit growth.
+2. websites are often supported with advertising, so the more people
+visit their website, the more they get, and used drawing may attract
+more people to the website.
+3. the artists' collaboration may start in the free online form, and
+then the collection of artworks in the collaboration may be published.
+Even if the published books will be given to people as a present (so
+no actual money for the authors), the company that is responsible for
+printing gets money for their work.
+Also all the authors (especially the organizer of the collaboration)
+may gain more popularity which leads to the growth of profit when
+selling some other drawings/works/merch.
+
+DATA
+
+Exercise: What is the effect on science reproducibility if the data
+set is not liberally licensed?
+
+Then it is hard to get the data for the research, and it may have a
+lot of prohibitions considering its usage.
+If the data set is found by scraping websites, and the data is not
+available for usage, it may be hard to reproduce the project because
+the websites are always being updated, especially some news sources
+and social networks.
+If the data is found from the company, it is not necessary that
+someone else will be able to get the same data for the same purposes.
+So it all slows down the science in some way.
+
+Exercise: give an example of a proprietary data source; what could you
+do with that data if it were liberally licensed?
+
+For example, there is a neural network GPT-3 created by OpenAI, which
+is not available for free for everyone but for few other development
+companies.
+If the model was liberally licensed, more people, especially novice
+developers, could use the model for their own projects, study the
+model's architecture in more detail, maybe even improve it, which is
+good for science and technology development.
+
+ACTIVITY / PRACTICAL
+
+Write a data policy for your НИС. This should include:
+1. a description of what data you will use
+We use arg-microtexts-multilayer-rus-eng corpus: 112 short
+argumentative texts in English with the Russian translation (human and
+three variants of machine), annotated according to three different
+theories of discourse structure.
+
+2. where that data comes from, and what license it is under
+The corpus, the annotations and the associated code are released under
+a Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+International License.
+A human-readable summary of the licence agreement can be found here:
+https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+3. (roughly) what you will do with the data
+We annotate the human Russian translations manually and automatically.
+Annotation is divided into two parts: segmentation of the texts into
+smaller parts (elementary discourse units) and defining the rhetorical
+relations between them.
+Automatic annotations are obtained by two methods: adapting the
+existing Russian parser and by transferring the annotation from
+English
+
+4. whether you can/will release the data, and under what license
+In the license description the following information is written: "If
+you remix, transform, or build upon the material, you must distribute
+your contributions under the same license as the original."
+So we can release our results, and we should use the same license for it.
+
+5. how another research group will be able to reproduce your project
+The data will be uploaded online (on github, for example), as well as
+the code and the paper about the project. The code is written in
+Python which is available online and free too.
+Considering that there is no random component in the algorithms, the
+results are supposed to be reproducible.
