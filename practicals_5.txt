@@ -1,3 +1,5 @@
+LICENSING AND REDISTRIBUTION
+
 CODE
 
 Exercise: read the Wikipedia articles on Apache, BSD, and MIT licenses. Describe the similarities and the differences.
@@ -35,7 +37,8 @@ If the data is found from the company, it is not necessary that someone else wil
 So it all slows down the science in some way.
 
 Exercise: give an example of a proprietary data source; what could you do with that data if it were liberally licensed?
-For example, there is a neural network GPT-3 created by OpenAI, which is not available for free for everyone but for few other development companies because the company wants to get money for the future developing.
+
+For example, there is a neural network GPT-3 created by OpenAI, which is not available for free for everyone but for few other development companies.
 If the model was liberally licensed, more people, especially novice developers, could use the model for own projects, study the model's achiteture in more detail, maybe even improve it, which is good for science and technology development.
 
 ACTIVITY / PRACTICAL
@@ -61,5 +64,3 @@ So we can release our results, and we should use the same license for it.
 5. how another research group will be able to reproduce your project
 The data will be uploaded online (on github, for example), as well as the code and the paper about the project. The code is written in Python which is available online and free too.
 Considering that there is no random component in the algorithms, the results are supposed to be reproducable.
-
-
